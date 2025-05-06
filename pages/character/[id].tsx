@@ -2,8 +2,15 @@ import { GetServerSideProps } from 'next';
 import { generateCharacter } from '../../lib/generator';
 import { User, Shield, Globe, Sparkles, Wand2, RefreshCcw} from 'lucide-react';
 
-
-export default function CharacterPage({ character }: any) {
+type Character = {
+    race: string;
+    clan: string;
+    job: string;
+    homeland: string;
+    quirk: string;
+  };
+  
+  export default function CharacterPage({ character }: { character: Character }) {
   return (
     <main className="min-h-screen bg-white p-6">
       <div className="max-w-xl mx-auto bg-blue-100 p-8 rounded-xl shadow-md">

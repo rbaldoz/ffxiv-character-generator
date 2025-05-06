@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import { generateCharacter } from '../../lib/generator';
 import { User, Shield, Globe, Sparkles, Wand2, RefreshCcw} from 'lucide-react';
 
+
 export default function CharacterPage({ character }: any) {
   return (
     <main className="min-h-screen bg-white p-6">
